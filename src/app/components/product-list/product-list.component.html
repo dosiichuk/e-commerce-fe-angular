@@ -1,0 +1,5 @@
+<ul *ngFor="let tempProduct of products">
+  <li>
+    {{ tempProduct.name }}: {{ tempProduct.unitPrice | currency : "USD" }}
+  </li>
+</ul>
