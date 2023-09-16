@@ -13,6 +13,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
 import { CartService } from './services/cart-service.service';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -22,7 +24,7 @@ const routes: Routes = [
   // {path: 'login/callback', component: OktaCallbackComponent},
   // {path: 'login', component: LoginComponent},
 
-  // {path: 'checkout', component: CheckoutComponent},
+  { path: 'checkout', component: CheckoutComponent },
   { path: 'cart-details', component: CartDetailsComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'search/:keyword', component: ProductListComponent },
@@ -42,10 +44,12 @@ const routes: Routes = [
     SearchComponent,
     ProductDetailsComponent,
     CartStatusComponent,
-    CartDetailsComponent
+    CartDetailsComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
